@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #c49a6c;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .sidebar button {
+            background-color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .content {
+            width: 80%;
+            background-color: #c49a6c;
+            padding: 30px;
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-picture {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #000;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #000;
+        }
+
+        .form-group label {
+            flex: 1;
+            font-weight: bold;
+        }
+
+        .change-image-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+        }
+
+        .footer button {
+            background-color: #000;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <button>MI PERFIL</button>
+        <a href="{% url 'lista_alumnos' %}" class="btn">PLANILLA DE ALUMNOS</a>
+        <a href="{% url 'inicio' %}" class="btn">CERRAR SESION</a>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>MI PERFIL</h1>
+            <div class="user-info">
+                <span>Noelia, Nieva</span>
+                <div class="profile-picture"></div>
+            </div>
+        </header>
+
+        <form>
+            <div class="form-group">
+                <label for="dni">DNI</label>
+                <input type="text" id="dni" placeholder="Ingrese su DNI">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" placeholder="Ingrese su teléfono">
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha de nacimiento</label>
+                <input type="date" id="fecha">
+            </div>
+            <div class="form-group">
+                <label for="domicilio">Domicilio</label>
+                <input type="text" id="domicilio" placeholder="Ingrese su domicilio">
+            </div>
+
+            <button type="button" class="change-image-btn">Cambiar Imagen</button>
+        </form>
+
+        <div class="footer">
+            <button>Editar perfil</button>
+        </div>
+    </div>
+</body>
+</html>

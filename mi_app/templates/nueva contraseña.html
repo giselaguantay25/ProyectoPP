@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperación de Cuenta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+        }
+
+        .container {
+            background-color: #c89e4a;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 400px;
+            position: relative;
+        }
+
+        .back-button {
+            background-color: #a67524;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: #e1c386;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        label {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .update-button {
+            background-color: #a67524;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="back-button">Volver</button>
+        <h1>INGRESA A LA PLATAFORMA</h1>
+        <div class="form-container">
+            <h2>RECUPERACIÓN DE CUENTA</h2>
+            <label for="new-password">Escribe tu nueva contraseña</label>
+            <input type="password" id="new-password">
+            <label for="confirm-password">Confirma tu nueva contraseña</label>
+            <input type="password" id="confirm-password">
+            <button class="update-button" onclick="updatePassword()">ACTUALIZAR</button>
+        </div>
+    </div>
+    <script>
+        function updatePassword() {
+            const newPassword = document.getElementById('new-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (newPassword === confirmPassword) {
+                alert('Contraseña actualizada correctamente.');
+            } else {
+                alert('Las contraseñas no coinciden. Inténtalo de nuevo.');
+            }
+        }
+    </script>
+</body>
+</html>

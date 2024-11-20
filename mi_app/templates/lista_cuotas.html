@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Cuotas</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+</head>
+<body>
+
+    <h1>Lista de Cuotas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Alumno</th>
+                <th>Mes</th>
+                <th>Monto</th>
+                <th>Fecha de Pago</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cuota in cuotas %}
+            <tr>
+                <td>{{ cuota.id_cuota }}</td>
+                <td>{{ cuota.alumno }}</td>
+                <td>{{ cuota.mes }}</td>
+                <td>{{ cuota.monto }}</td>
+                <td>{{ cuota.fecha_pago }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No hay cuotas registradas.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

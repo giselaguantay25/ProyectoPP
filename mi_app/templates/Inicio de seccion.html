@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Inicio de Sesión</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #d9b36b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+        }
+
+        .volver-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 8px 15px;
+            border: 2px solid black;
+            border-radius: 50px;
+            background: #d9b36b;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .login-box {
+            background-color: #dec295;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+            width: 300px;
+        }
+
+        .login-box label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+            color: black;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .forgot-btn {
+            display: block;
+            background-color: #8a6d35;
+            color: white;
+            border: none;
+            padding: 8px 10px;
+            margin-bottom: 15px;
+            width: 100%;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-btn {
+            background-color: #8a6d35;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="volver-btn">Volver</button>
+        <h1>INGRESA A LA PLATAFORMA</h1>
+        <div class="login-box">
+            <label for="username">NOMBRE DE USUARIO</label>
+            <input type="text" id="username" placeholder="Nombre de usuario">
+            <label for="password">CONTRASEÑA</label>
+            <input type="password" id="password" placeholder="Contraseña">
+            
+            <a href="Recuperaciondecontraseña" class="forgot-btn">OLVIDE MI CONTRASEÑA</a>
+            <button class="login-btn">ACCEDER</button>
+        </div>
+    </div>
+</body>
+</html>

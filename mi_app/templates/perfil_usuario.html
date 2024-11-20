@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F4F4F4;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #d9b15f;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+
+        .sidebar button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f3e1c3;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .sidebar button:hover {
+            background-color: #d9a457;
+        }
+
+        .content {
+            width: 80%;
+            background-color: #b58b30;
+            padding: 20px;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #000;
+        }
+
+        .header h2 {
+            margin: 0;
+        }
+
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .user-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin: 5px 0;
+        }
+
+        .form-group input {
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-section {
+            width: 48%;
+            background-color: #e5c46e;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .form-section h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .profile-img-section {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .profile-img-section button {
+            margin-top: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        .profile-img-section button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <button>MI PERFIL</button>
+        <button>ESTADO DE CUOTAS</button>
+        <button>CERRAR SECCIÓN</button>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <h2>MI PERFIL</h2>
+            <div class="user-info">
+                <img src="https://via.placeholder.com/50" alt="Foto de perfil">
+                <span>Lourde Cruz</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="form-section">
+                <h3>Datos Personales</h3>
+                <div class="form-group">
+                    <label for="dni">DNI</label>
+                    <input type="text" id="dni">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" id="telefono">
+                </div>
+                <div class="form-group">
+                    <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+                    <input type="date" id="fecha-nacimiento">
+                </div>
+                <div class="form-group">
+                    <label for="domicilio">Domicilio</label>
+                    <input type="text" id="domicilio">
+                </div>
+            </div>
+
+            <div class="profile-img-section">
+                <img src="https://via.placeholder.com/80" alt="Foto de perfil">
+                <button>Cambiar Imagen</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="form-section">
+                <h3>Datos del Padre/Tutor</h3>
+                <div class="form-group">
+                    <label for="nombre-apellido">Nombre y Apellido</label>
+                    <input type="text" id="nombre-apellido">
+                </div>
+                <div class="form-group">
+                    <label for="telefono-tutor">Teléfono</label>
+                    <input type="text" id="telefono-tutor">
+                </div>
+                <div class="form-group">
+                    <label for="dni-tutor">DNI</label>
+                    <input type="text" id="dni-tutor">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Dato de Salud</h3>
+                <div class="form-group">
+                    <label for="enfermedad">Posee alguna enfermedad y/o alergia. ¿Cuál?</label>
+                    <input type="text" id="enfermedad">
+                </div>
+                <div class="form-group">
+                    <label for="medicacion">Toma alguna medicación. ¿Cuál?</label>
+                    <input type="text" id="medicacion">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group" style="text-align: right; margin-top: 10px;">
+            <button class="btn">Editar perfil</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

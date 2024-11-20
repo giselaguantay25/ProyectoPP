@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Competencias</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+</head>
+<body>
+
+    <h1>Lista de Competencias</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for competencia in competencias %}
+            <tr>
+                <td>{{ competencia.id_competencia }}</td>
+                <td>{{ competencia.nombre }}</td>
+                <td>{{ competencia.direccion }}</td>
+                <td>{{ competencia.fecha }}</td>
+                <td>{{ competencia.hora }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No hay competencias registradas.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

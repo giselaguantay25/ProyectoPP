@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+    <body>
+        <header class="hero">
+            <div class="overlay">
+                <h1 class="title">ESCUELA ECUESTRE ARRE CABALLITO</h1>
+                <nav class="menu">
+                    <a href="{% url 'nuestra_historia' %}" class="menu-item">NUESTRA HISTORIA</a>
+                    <a href="{% url 'servicios' %}" class="menu-item">SERVICIOS</a>
+                    <a href="{% url 'contacto' %}" class="menu-item">CONTACTO</a>
+                    <a href="{% url 'ubicacion' %}" class="menu-item">UBICACIÓN</a>
+                    <a href="{% url 'iniciar_sesion' %}" class="menu-item">INICIAR SESIÓN</a>
+                </nav>
+            </div>
+        </header>
+    </body>
+</html>

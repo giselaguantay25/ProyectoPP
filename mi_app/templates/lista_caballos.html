@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Caballos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+</head>
+<body>
+
+    <h1>Lista de Caballos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Sexo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for caballo in caballos %}
+            <tr>
+                <td>{{ caballo.id_caballo }}</td>
+                <td>{{ caballo.nombre }}</td>
+                <td>{{ caballo.edad }}</td>
+                <td>{{ caballo.get_sexo_display }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">No hay caballos registrados.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

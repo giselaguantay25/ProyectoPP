@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+</head>
+<body>
+    <section id="iniciar-sesion">
+        <h2>Iniciar Sesión</h2>
+        <div class="login-container">
+            <form>
+                <div class="input-group">
+                    <label for="username">Nombre de Usuario</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+              <p><a href="{% url 'perfil_profe' %}">Iniciar Sesión </a></p>
+            </form>
+            <div class="footer">
+                <p>¿Olvidaste tu Contraseña? <a href="{% url 'nueva contraseña' %}">Recuperala Aquí</a></p>
+                <p><a href="{% url 'inicio' %}">Volver a la Página Principal</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

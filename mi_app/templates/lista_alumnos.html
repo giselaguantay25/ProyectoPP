@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilla de Alumnos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #c49a6c;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .sidebar button {
+            background-color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .content {
+            width: 80%;
+            background-color: #c49a6c;
+            padding: 30px;
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #000;
+            cursor: pointer;
+        }
+
+        th {
+            background-color: #000;
+            color: #fff;
+        }
+
+        tr:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+        }
+
+        .footer button {
+            background-color: #000;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="{% url 'perfil_profe' %}" class="btn">MI PERFIL</a>
+        <button>PLANILLA DE ALUMNOS</button>
+        <a href="{% url 'inicio' %}" class="btn">CERRAR SESION</a>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>PLANILLA DE ALUMNOS</h1>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>dni</th>
+                    <th>fecha nacimiento</th>
+                    <th>direccion</th>
+                    <th>telefono</th>
+                    <th>correo</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tbody>
+            {% for alumno in alumnos %}
+            <tr>
+                <td>{{ alumno.id_alumno }}</td>
+                <td>{{ alumno.nombre }}</td>
+                <td>{{ alumno.apellido }}</td>
+                <td>{{ alumno.dni }}</td>
+                <td>{{ alumno.fecha_nacimiento }}</td>
+                <td>{{ alumno.direccion }}</td>
+                <td>{{ alumno.telefono }}</td>
+                <td>{{ alumno.email }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="8">No hay alumnos registrados.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="footer">
+        <a href="{% url 'agregar_alumno' %}" class="btn">Agregar Alumno</a>
+    </div>
+</div>
+
+<script>
+    // Función para redirigir al pago con el ID del alumno seleccionado
+    function redirigirPago(alumnoId) {
+       
+        window.location.href = url;
+    }
+</script>
+
+</body>
+</html>

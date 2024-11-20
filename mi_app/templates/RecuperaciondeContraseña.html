@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Recuperación de Cuenta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #d9b36b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+        }
+
+        .volver-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 8px 15px;
+            border: 2px solid black;
+            border-radius: 50px;
+            background: #d9b36b;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .recovery-box {
+            background-color: #dec295;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: center;
+            width: 350px;
+        }
+
+        .recovery-box h2 {
+            font-size: 20px;
+            color: black;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .recovery-box p {
+            color: black;
+            margin-bottom: 15px;
+        }
+
+        .recovery-box input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .recovery-btn {
+            background-color: #8a6d35;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="volver-btn">Volver</button>
+        <h1>INGRESA A LA PLATAFORMA</h1>
+        <div class="recovery-box">
+            <h2>RECUPERACIÓN DE CUENTA</h2>
+            <p>Por Favor Ingrese su Correo Electrónico</p>
+            <input type="email" placeholder="Correo electrónico">
+            <button class="recovery-btn">RECUPERAR</button>
+        </div>
+    </div>
+</body>
+</html>
